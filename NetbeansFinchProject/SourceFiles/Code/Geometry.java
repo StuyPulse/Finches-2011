@@ -16,7 +16,13 @@ public class Geometry
       // Instantiating the Finch object
       Finch myFinch = new Finch();
 
-      // Write some code here!
+      int lasers=125;
+      int time=500;
+      int loop=5;
+
+      
+      myFinch.setWheelVelocities (lasers, -lasers, time);
+      myFinch.sleep (1000);
 
       // Always end your program with finch.quit()
       myFinch.quit();
