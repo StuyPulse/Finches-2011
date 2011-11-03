@@ -17,7 +17,8 @@ public class Geometry
       Finch myFinch = new Finch();
 
       // Write some code here!
-
+// hi //
+      
       // Always end your program with finch.quit()
       myFinch.quit();
       System.exit(0);
