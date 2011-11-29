@@ -19,13 +19,16 @@ public class Geometry
       // Write some code here
 
       int powerl = 0;
-      double powerCo = .04;
+      double powerCo = .2;
       long lastTime=System.currentTimeMillis();
-      while(powerl<255){
+      long totalTime = 0;
+      while(powerl<100){
           int timeChange=(int)(System.currentTimeMillis()-lastTime);
-          powerl +=powerCo*timeChange;
-          myFinch.setWheelVelocities(powerl,255-powerl);
+          totalTime+=timeChange;
+          powerl = (int)(powerCo*totalTime);
+          myFinch.setWheelVelocities(powerl,100-powerl);
           lastTime=System.currentTimeMillis();
+                  System.out.println(totalTime + powerl);
           }
 
       // Always end your program with finch.quit()
