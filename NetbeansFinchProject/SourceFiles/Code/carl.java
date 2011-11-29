@@ -16,7 +16,7 @@ public class carl
       // Instantiating the Finch object
       Finch myFinch = new Finch();
 
-      // What to do:
+      // What to do?
       
       
       // Always end your program with finch.quit()
