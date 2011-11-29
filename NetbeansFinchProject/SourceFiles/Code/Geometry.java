@@ -15,7 +15,7 @@ public class Geometry {
         // Instantiating the Finch object
         Finch myFinch = new Finch();
         Geometry myGeometry = new Geometry();
-        myGeometry.square(myFinch, 9);
+        myGeometry.square(myFinch, 6);
 
         // Always end your program with finch.quit()
         myFinch.quit();
@@ -24,10 +24,11 @@ public class Geometry {
 
     private void square(Finch myFinch, int loop) {
         int lasers = 125;
-        int time = 500;
+        int timeForward = 1000;
+        int timeTurn = 2000;
         for (int i = 0; i < loop; i++) {
-            myFinch.setWheelVelocities(lasers, lasers, time);
-            myFinch.setWheelVelocities(lasers, -lasers, 4*time/loop);
+            myFinch.setWheelVelocities(lasers, lasers, timeForward);
+            myFinch.setWheelVelocities(lasers, -lasers, timeTurn/loop);
             if (i % 2 == 1) {
                 myFinch.setLED(Color.CYAN);
             } else {
