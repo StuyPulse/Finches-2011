@@ -12,6 +12,7 @@ import edu.cmu.ri.createlab.terk.robot.finch.Finch;
 public class TeamLarry
 
    {
+    static final int TURN360 = 1700;
    public static void main(final String[] args)
       {
       //nstantiating the Finch object
@@ -20,7 +21,7 @@ public class TeamLarry
       
      //teamLarry.darwin(myFinch, 5);
      //teamLarry.polygon(myFinch, 3);
-     teamLarry.test(1000, 150, myFinch);
+     teamLarry.test(TURN360, 150, myFinch);
       
       
       // Always end your program with finch.quit()
