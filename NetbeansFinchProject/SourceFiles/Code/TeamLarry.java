@@ -12,7 +12,7 @@ import edu.cmu.ri.createlab.terk.robot.finch.Finch;
 public class TeamLarry
 
    {
-    static final int TURN360 = 1700;
+    static final int TURN360 = 1950;
    public static void main(final String[] args)
       {
       //nstantiating the Finch object
@@ -20,9 +20,10 @@ public class TeamLarry
       TeamLarry teamLarry = new TeamLarry();
       
      //teamLarry.darwin(myFinch, 5);
-     //teamLarry.polygon(myFinch, 3);
-     teamLarry.test(TURN360, 150, myFinch);
+     //teamLarry.polygon(myFinch, 6);
+     teamLarry.test(1950, 150, myFinch);
       
+    
       
       // Always end your program with finch.quit()
       myFinch.quit();
@@ -31,12 +32,12 @@ public class TeamLarry
 
    public void polygon(Finch myFinch, int sides){
        int speed = 150;
-       int time = 500;
+       
        //int timeTurn = 1900/sides;
 
        for(int i = 0; i < sides; i++){
-        //myFinch.setWheelVelocities(speed, speed, time);
-        myFinch.setWheelVelocities(speed, -speed, time);
+        myFinch.setWheelVelocities(speed, speed, 1000);
+        myFinch.setWheelVelocities(speed, -speed, TURN360/sides);
 
        }
     }
