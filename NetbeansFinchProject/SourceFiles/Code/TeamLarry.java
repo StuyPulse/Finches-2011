@@ -28,7 +28,7 @@ public class TeamLarry
       }
 
    public void polygon(Finch myFinch, int sides){
-       int speed = 190;
+       int speed = 150;
        int time = 500;
        int timeTurn = 1900/sides;
 
