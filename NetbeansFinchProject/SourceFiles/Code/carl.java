@@ -27,17 +27,27 @@ public class carl {
 
     
     public static void face(Finch f) {
+        boolean wasTapped = false;
+        int timeSinceBackedUp = 0;
         while (true) {
-
-            if (f.isTapped()) {
+            if (f.isTapped() && timeSinceBackedUp > 50) {
                 f.setLED(Color.red);
                 f.setWheelVelocities(-255, -255, 1000);
                 f.setWheelVelocities(-100, 255, 300);
+                wasTapped = true;
+                timeSinceBackedUp = 0;
+                f.sleep(250);
             }
             else {
+                if (wasTapped) {
+                    f.setWheelVelocities(127, 127, 200);
+                    wasTapped = false;
+                }
                 f.setLED(Color.BLACK);
                 f.setWheelVelocities(255, 255);
             }
+            timeSinceBackedUp++;
+        
         }
     }
     
