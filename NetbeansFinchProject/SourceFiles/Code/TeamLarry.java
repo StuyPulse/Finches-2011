@@ -19,7 +19,8 @@ public class TeamLarry
       TeamLarry teamLarry = new TeamLarry();
       
      //teamLarry.darwin(myFinch, 5);
-     teamLarry.polygon(myFinch, 3);
+     //teamLarry.polygon(myFinch, 3);
+     teamLarry.test(1000, 150, myFinch);
       
       
       // Always end your program with finch.quit()
@@ -30,14 +31,18 @@ public class TeamLarry
    public void polygon(Finch myFinch, int sides){
        int speed = 150;
        int time = 500;
-       int timeTurn = 1900/sides;
+       //int timeTurn = 1900/sides;
 
        for(int i = 0; i < sides; i++){
-        myFinch.setWheelVelocities(speed, speed, time);
-        myFinch.setWheelVelocities(speed, -speed, timeTurn);
+        //myFinch.setWheelVelocities(speed, speed, time);
+        myFinch.setWheelVelocities(speed, -speed, time);
 
        }
     }
+   public void test (int timeTurned, int speed, Finch myFinch){
+       
+     myFinch.setWheelVelocities (speed, -speed, timeTurned);
+   }
    }
    /*
    public void darwin(Finch myFinch, int loop){
